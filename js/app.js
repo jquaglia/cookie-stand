@@ -10,7 +10,7 @@ var parisList = document.getElementById('paris');
 var limaList = document.getElementById('lima');
 
 
-// 1st object
+// 1st Object
 var seattleStore = {
   name: 'Seattle',
   min: 23,
@@ -47,6 +47,7 @@ var seattleStore = {
   }
 };
 
+// 2nd Object
 var tokyoStore = {
   name: 'Tokyo',
   min: 3,
@@ -83,6 +84,7 @@ var tokyoStore = {
   }
 };
 
+// 3rd Object
 var dubaiStore = {
   name: 'Dubai',
   min: 11,
@@ -119,6 +121,7 @@ var dubaiStore = {
   }
 };
 
+// 4th Object
 var parisStore = {
   name: 'Paris',
   min: 20,
@@ -155,6 +158,7 @@ var parisStore = {
   }
 };
 
+// 5th Object
 var limaStore = {
   name: 'Paris',
   min: 2,
