@@ -1,3 +1,6 @@
 body {
   background-color: bisque;
 }
+th, td {
+  padding: 10px;
+}
