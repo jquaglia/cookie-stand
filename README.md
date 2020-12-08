@@ -2,7 +2,7 @@
 
 ## Salmon Cookies
 
-I built an app with a direct and powerful purpose. My app does all of the things that it accomplishes well. Here  I describe the purpose and functionality so those that visit my README understand the app.
+I built an object! The object calculates the daily total and hourly sales of Salmon Cookies! It also outputs this info in the form of a list for multiple different cities on my sales.html page.
 
 ### Author: Jason Quaglia
 
@@ -22,6 +22,4 @@ I built an app with a direct and powerful purpose. My app does all of the things
 
 ### Reflections and Comments
 
-* Consider including the answers to your daily journal and submission questions here
-
-* This is also a good place to reflect on the tools and resources used and learned
+* This was difficult at first! I really felt lost during the hourly sales function. I welcome the challenge! I actually feel so fulfilled at the end of a day like today!
