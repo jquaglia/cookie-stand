@@ -43,7 +43,12 @@ var seattleStore = {
       // append it to the DOM
       seattleList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    seattleList.appendChild(liElement);
   }
 };
 
@@ -80,7 +85,12 @@ var tokyoStore = {
       // append it to the DOM
       tokyoList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    tokyoList.appendChild(liElement);
   }
 };
 
@@ -117,7 +127,12 @@ var dubaiStore = {
       // append it to the DOM
       dubaiList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    dubaiList.appendChild(liElement);
   }
 };
 
@@ -154,7 +169,12 @@ var parisStore = {
       // append it to the DOM
       parisList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    parisList.appendChild(liElement);
   }
 };
 
@@ -191,7 +211,12 @@ var limaStore = {
       // append it to the DOM
       limaList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    limaList.appendChild(liElement);
   }
 };
 
