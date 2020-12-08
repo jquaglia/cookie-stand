@@ -25,10 +25,10 @@ var seattleStore = {
   calculateHourlySales() {
     for (var i = 0; i < hours.length; i++) {
       // var calcSales = this.getRandomCustomers() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomCustomers() * this.avg);
-      // this.hourlySales[i] = calcSalesRound;
-      this.hourlySales.push(calcSalesRound)[i];
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomCustomers() * this.avg);
+      // this.hourlySales[i] = hourlyTotal;
+      this.hourlySales.push(hourlyTotal);
+      this.dailyTotal += hourlyTotal;
     }
   },
   // render my list with total at the end
@@ -43,7 +43,12 @@ var seattleStore = {
       // append it to the DOM
       seattleList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    seattleList.appendChild(liElement);
   }
 };
 
@@ -62,10 +67,10 @@ var tokyoStore = {
   calculateHourlySales() {
     for (var i = 0; i < hours.length; i++) {
       // var calcSales = this.getRandomCustomers() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomCustomers() * this.avg);
-      // this.hourlySales[i] = calcSalesRound;
-      this.hourlySales.push(calcSalesRound)[i];
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomCustomers() * this.avg);
+      // this.hourlySales[i] = hourlyTotal;
+      this.hourlySales.push(hourlyTotal);
+      this.dailyTotal += hourlyTotal;
     }
   },
   // render my list with total at the end
@@ -80,7 +85,12 @@ var tokyoStore = {
       // append it to the DOM
       tokyoList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    tokyoList.appendChild(liElement);
   }
 };
 
@@ -99,10 +109,10 @@ var dubaiStore = {
   calculateHourlySales() {
     for (var i = 0; i < hours.length; i++) {
       // var calcSales = this.getRandomCustomers() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomCustomers() * this.avg);
-      // this.hourlySales[i] = calcSalesRound;
-      this.hourlySales.push(calcSalesRound)[i];
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomCustomers() * this.avg);
+      // this.hourlySales[i] = hourlyTotal;
+      this.hourlySales.push(hourlyTotal);
+      this.dailyTotal += hourlyTotal;
     }
   },
   // render my list with total at the end
@@ -117,7 +127,12 @@ var dubaiStore = {
       // append it to the DOM
       dubaiList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    dubaiList.appendChild(liElement);
   }
 };
 
@@ -136,10 +151,10 @@ var parisStore = {
   calculateHourlySales() {
     for (var i = 0; i < hours.length; i++) {
       // var calcSales = this.getRandomCustomers() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomCustomers() * this.avg);
-      // this.hourlySales[i] = calcSalesRound;
-      this.hourlySales.push(calcSalesRound)[i];
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomCustomers() * this.avg);
+      // this.hourlySales[i] = hourlyTotal;
+      this.hourlySales.push(hourlyTotal);
+      this.dailyTotal += hourlyTotal;
     }
   },
   // render my list with total at the end
@@ -154,7 +169,12 @@ var parisStore = {
       // append it to the DOM
       parisList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    parisList.appendChild(liElement);
   }
 };
 
@@ -173,10 +193,10 @@ var limaStore = {
   calculateHourlySales() {
     for (var i = 0; i < hours.length; i++) {
       // var calcSales = this.getRandomCustomers() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomCustomers() * this.avg);
-      // this.hourlySales[i] = calcSalesRound;
-      this.hourlySales.push(calcSalesRound)[i];
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomCustomers() * this.avg);
+      // this.hourlySales[i] = hourlyTotal;
+      this.hourlySales.push(hourlyTotal);
+      this.dailyTotal += hourlyTotal;
     }
   },
   // render my list with total at the end
@@ -191,7 +211,12 @@ var limaStore = {
       // append it to the DOM
       limaList.appendChild(liElement);
     }
+    // render the daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    limaList.appendChild(liElement);
   }
 };
 
