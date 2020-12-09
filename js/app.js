@@ -4,7 +4,7 @@
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',];
 var storeTable = document.getElementById('table');
 var tableHeader = document.getElementById('tHeader');
-// var tableFooter = document.getElementById('tFooter');
+var tableFooter = document.getElementById('tFooter');
 var stores = [];
 
 
@@ -61,7 +61,7 @@ function renderHeader() {
   thElement.textContent = 'Stores';
   trElement.appendChild(thElement);
   // Render Header iteratively through the hours
-  for (var i = 0; i < hours.length; i++){
+  for (var i = 0; i < hours.length; i++) {
     thElement = document.createElement('th');
     thElement.textContent = hours[i];
     trElement.appendChild(thElement);
@@ -72,19 +72,32 @@ function renderHeader() {
   trElement.appendChild(thElement);
 }
 
-// // render footer of table
-// function renderFooter(){
-//   var trElement = document.createElement('tr');
-//   tableFooter.appendChild(trElement);
-//   var thElement = document.createElement('th');
-//   thElement.textContent = 'Totals';
-//   trElement.appendChild(thElement);
-//   for (var i = 0; i < hours.length; i++){
-//     for (var j = 0; j < stores.length; i++){
-//       var GlobalHourlyTotal = 
-//     }
-//   }
-// }
+// render footer of table
+function renderFooter() {
+  var trElement = document.createElement('tr');
+  tableFooter.appendChild(trElement);
+  var thElement = document.createElement('th');
+  thElement.textContent = 'Totals:';
+  trElement.appendChild(thElement);
+  for (var i = 0; i < hours.length; i++) {
+    var GlobalHourlyTotal = 0;
+    for (var j = 0; j < stores.length; j++) {
+      GlobalHourlyTotal += stores[j].hourlySales[i];
+    }
+    var tdElement = document.createElement('td');
+    tdElement.textContent = GlobalHourlyTotal;
+    trElement.appendChild(tdElement);
+  }
+  var GlobalDailyTotal = 0;
+  for (var n = 0; n < hours.length; n++){
+    for (var k = 0; k < stores.length; k++){
+      GlobalDailyTotal += stores[k].hourlySales[n];
+    }
+  }
+  tdElement = document.createElement('td');
+  tdElement.textContent = GlobalDailyTotal;
+  trElement.appendChild(tdElement);
+}
 
 // instantiations
 new Store('Seattle', 23, 65, 6.3);
@@ -94,10 +107,11 @@ new Store('Paris', 20, 38, 2.3);
 new Store('Lima', 2, 16, 4.6);
 
 function renderAll() {
-  for (var i = 0; i < stores.length; i++){
+  for (var i = 0; i < stores.length; i++) {
     stores[i].render();
   }
   renderHeader();
+  renderFooter();
 }
 
 // executable code
