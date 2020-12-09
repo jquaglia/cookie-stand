@@ -4,6 +4,7 @@
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',];
 var storeTable = document.getElementById('table');
 var tableHeader = document.getElementById('tHeader');
+// var tableFooter = document.getElementById('tFooter');
 var stores = [];
 
 
@@ -71,7 +72,19 @@ function renderHeader() {
   trElement.appendChild(thElement);
 }
 
-// render footer of table
+// // render footer of table
+// function renderFooter(){
+//   var trElement = document.createElement('tr');
+//   tableFooter.appendChild(trElement);
+//   var thElement = document.createElement('th');
+//   thElement.textContent = 'Totals';
+//   trElement.appendChild(thElement);
+//   for (var i = 0; i < hours.length; i++){
+//     for (var j = 0; j < stores.length; i++){
+//       var GlobalHourlyTotal = 
+//     }
+//   }
+// }
 
 // instantiations
 new Store('Seattle', 23, 65, 6.3);
