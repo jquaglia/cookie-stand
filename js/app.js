@@ -3,6 +3,7 @@
 // global variables
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',];
 var storeTable = document.getElementById('table');
+var tableHeader = document.getElementById('tHeader');
 var stores = [];
 
 
@@ -51,13 +52,26 @@ Store.prototype.render = function () {
   trElement.appendChild(tdElement);
 };
 
-// function renderHeader() {
-//   // Render Header iteratively through the hours
-//   for(var i = 0; i < hours.length; i++){
-//     var 
-//   }
-// }
+// render header of table
+function renderHeader() {
+  var trElement = document.createElement('tr');
+  tableHeader.appendChild(trElement);
+  var thElement = document.createElement('th');
+  thElement.textContent = 'Stores';
+  trElement.appendChild(thElement);
+  // Render Header iteratively through the hours
+  for (var i = 0; i < hours.length; i++){
+    thElement = document.createElement('th');
+    thElement.textContent = hours[i];
+    trElement.appendChild(thElement);
+  }
+  // render the total
+  thElement = document.createElement('th');
+  thElement.textContent = 'Daily Total';
+  trElement.appendChild(thElement);
+}
 
+// render footer of table
 
 // instantiations
 new Store('Seattle', 23, 65, 6.3);
@@ -70,6 +84,7 @@ function renderAll() {
   for (var i = 0; i < stores.length; i++){
     stores[i].render();
   }
+  renderHeader();
 }
 
 // executable code
