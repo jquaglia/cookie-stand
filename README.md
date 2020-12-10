@@ -1,4 +1,4 @@
-# LAB - Number 7
+# LAB - Number 8b
 
 ## Salmon Cookies
 
@@ -7,6 +7,8 @@ I built an Object Constructor! The constructor calculates the daily total and ho
 ### Author: Jason Quaglia
 
 ### Collaborators
+
+* Ryan Gallaway
 
 * Anthony Hayward
 
