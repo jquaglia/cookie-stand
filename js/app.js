@@ -58,7 +58,7 @@ function renderHeader() {
   var trElement = document.createElement('tr');
   tableHeader.appendChild(trElement);
   var thElement = document.createElement('th');
-  thElement.textContent = 'Stores';
+  thElement.textContent = '';
   trElement.appendChild(thElement);
   // Render Header iteratively through the hours
   for (var i = 0; i < hours.length; i++) {
@@ -77,25 +77,21 @@ function renderFooter() {
   var trElement = document.createElement('tr');
   tableFooter.appendChild(trElement);
   var thElement = document.createElement('th');
-  thElement.textContent = 'Totals:';
+  thElement.textContent = 'Total Sales:';
   trElement.appendChild(thElement);
+  var globalDailyTotal = 0;
   for (var i = 0; i < hours.length; i++) {
-    var GlobalHourlyTotal = 0;
+    var globalHourlyTotal = 0;
     for (var j = 0; j < stores.length; j++) {
-      GlobalHourlyTotal += stores[j].hourlySales[i];
+      globalHourlyTotal += stores[j].hourlySales[i];
     }
+    globalDailyTotal += globalHourlyTotal;
     var tdElement = document.createElement('td');
-    tdElement.textContent = GlobalHourlyTotal;
+    tdElement.textContent = globalHourlyTotal;
     trElement.appendChild(tdElement);
   }
-  var GlobalDailyTotal = 0;
-  for (var n = 0; n < hours.length; n++){
-    for (var k = 0; k < stores.length; k++){
-      GlobalDailyTotal += stores[k].hourlySales[n];
-    }
-  }
   tdElement = document.createElement('td');
-  tdElement.textContent = GlobalDailyTotal;
+  tdElement.textContent = globalDailyTotal;
   trElement.appendChild(tdElement);
 }
 

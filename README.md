@@ -1,4 +1,4 @@
-# LAB - Number 7
+# LAB - Number 8b
 
 ## Salmon Cookies
 
@@ -7,6 +7,8 @@ I built an Object Constructor! The constructor calculates the daily total and ho
 ### Author: Jason Quaglia
 
 ### Collaborators
+
+* Ryan Gallaway
 
 * Anthony Hayward
 
@@ -23,6 +25,8 @@ I built an Object Constructor! The constructor calculates the daily total and ho
 * [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 
 ### Reflections and Comments
+
+* I HATE CSS. Even when it's going well, it takes way too long to get anything accomplished.
 
 * This was difficult at first! I really felt lost during the hourly sales function. I welcome the challenge! I actually feel so fulfilled at the end of a day like today!
 
