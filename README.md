@@ -26,6 +26,8 @@ I built an Object Constructor! The constructor calculates the daily total and ho
 
 ### Reflections and Comments
 
+* I HATE CSS. Even when it's going well, it takes way too long to get anything accomplished.
+
 * This was difficult at first! I really felt lost during the hourly sales function. I welcome the challenge! I actually feel so fulfilled at the end of a day like today!
 
 * I'm realizing now that stacked module learning is taking affect and it actually feels like it's working. I already have a much better concept of week 1 content.

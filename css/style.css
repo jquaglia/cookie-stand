@@ -4,9 +4,6 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-
-
 /* Header */
 header {
   height: 150px;
@@ -84,31 +81,41 @@ main{
   height: 650px;
 }
 
+main span {
+  display: block;
+  text-align: center;
+}
+
+main img {
+  margin-top: 50px;
+  width: 400px;
+}
+
 main table {
   margin-top: 200px;
 }
 
 main ul {
-  margin-top: 75px;
+  margin-top: 150px;
 }
 
 main li {
-  margin-left: 13%;
+  margin-left: 16.5%;
   float: left;
   padding: 10px;
   text-align: center;
 }
 
 #fish {
-  width: 300px;
+  width: 200px;
 }
 
 #cutter {
-  width: 300px;
+  width: 200px;
 }
 
 #shirt {
-  width: 300px;
+  width: 200px;
 }
 
  /* Footer */
@@ -127,4 +134,9 @@ footer p {
   padding-left: 40px;
   margin-top: 15px;
   font-size: 14px;
+}
+
+footer img {
+  width: 200px;
+  float: left;
 }
