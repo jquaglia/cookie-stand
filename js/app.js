@@ -6,6 +6,7 @@ var storeTable = document.getElementById('table');
 var tableHeader = document.getElementById('tHeader');
 var tableFooter = document.getElementById('tFooter');
 var stores = [];
+var myForm = document.getElementById('form');
 
 
 
@@ -95,6 +96,19 @@ function renderFooter() {
   trElement.appendChild(tdElement);
 }
 
+//event Handler
+function handleSubmit(event){
+  event.preventDefault();
+  var name = event.target.nameOfStore.value;
+  var min = event.target.minCustomers.value;
+  var max = event.target.maxCustomers.value;
+  var avg = event.target.avgSales.value;
+  var newStore = new Store(name, min, max, avg);
+  newStore.render();
+  tableFooter.innerHTML = '';
+  renderFooter();
+}
+
 // instantiations
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
@@ -112,3 +126,6 @@ function renderAll() {
 
 // executable code
 renderAll();
+
+// event listener
+myForm.addEventListener('submit', handleSubmit);
