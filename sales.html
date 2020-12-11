@@ -25,17 +25,17 @@
       <form id="form">
         <fieldset>
           <legend>Enter new store data</legend>
-          <label>Name
+          <label>Name:
             <input type="text" name="nameOfStore">
           </label>
-          <label>Minimum Customers
-            <input type="text" name="minCustomers">
+          <label>Minimum Customers:
+            <input type="number" min="1" name="minCustomers">
           </label>
-          <label>Maximum Customers
-            <input type="text" name="maxCustomers">
+          <label>Maximum Customers:
+            <input type="number" min="2" name="maxCustomers">
           </label>
-          <label>Average Sales per Customer
-            <input type="number" step="0.01" name="avgSales">
+          <label>Average Sales per Customer:
+            <input type="number" min=".01" step="0.01" name="avgSales">
           </label>
           <button type="submit">Submit</button>
         </fieldset>
