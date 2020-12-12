@@ -54,6 +54,14 @@ Store.prototype.render = function () {
   trElement.appendChild(tdElement);
 };
 
+// functions vvvv
+// render element
+// function renderElement(elementCreated, content, parentElement){
+//   var childElement = document.createElement(elementCreated);
+//   childElement.textContent = content;
+//   parentElement.appendChild(childElement);
+// }
+
 // render header of table
 function renderHeader() {
   var trElement = document.createElement('tr');
@@ -100,9 +108,9 @@ function renderFooter() {
 function handleSubmit(event){
   event.preventDefault();
   var name = event.target.nameOfStore.value;
-  var min = event.target.minCustomers.value;
-  var max = event.target.maxCustomers.value;
-  var avg = event.target.avgSales.value;
+  var min = parseInt(event.target.minCustomers.value);
+  var max = parseInt(event.target.maxCustomers.value);
+  var avg = parseInt(event.target.avgSales.value);
   var newStore = new Store(name, min, max, avg);
   newStore.render();
   tableFooter.innerHTML = '';
