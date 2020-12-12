@@ -8,8 +8,7 @@ var tableFooter = document.getElementById('tFooter');
 var stores = [];
 var myForm = document.getElementById('form');
 
-
-
+// constructor
 function Store(name, min, max, avg) {
   this.name = name;
   this.min = min;
@@ -39,47 +38,42 @@ Store.prototype.render = function () {
   var trElement = document.createElement('tr');
   storeTable.appendChild(trElement);
   // create the first cell in row, give it the name content
-  var thElement = document.createElement('th');
-  thElement.textContent = this.name;
-  trElement.appendChild(thElement);
+  renderElement('th', this.name, trElement);
   // iteratively creates, give content, and append
   for (var i = 0; i < this.hourlySales.length; i++) {
-    var tdElement = document.createElement('td');
-    tdElement.textContent = this.hourlySales[i];
-    trElement.appendChild(tdElement);
+    renderElement('td', this.hourlySales[i], trElement);
   }
   // render the daily total
-  tdElement = document.createElement('td');
-  tdElement.textContent = this.dailyTotal;
-  trElement.appendChild(tdElement);
+  renderElement('td', this.dailyTotal, trElement);
 };
+
+// functions v
+
+// render element
+function renderElement(elementCreated, content, parentElement){
+  var childElement = document.createElement(elementCreated);
+  childElement.textContent = content;
+  parentElement.appendChild(childElement);
+}
 
 // render header of table
 function renderHeader() {
   var trElement = document.createElement('tr');
   tableHeader.appendChild(trElement);
-  var thElement = document.createElement('th');
-  thElement.textContent = '';
-  trElement.appendChild(thElement);
+  renderElement('th', '', trElement);
   // Render Header iteratively through the hours
   for (var i = 0; i < hours.length; i++) {
-    thElement = document.createElement('th');
-    thElement.textContent = hours[i];
-    trElement.appendChild(thElement);
+    renderElement('th', hours[i], trElement);
   }
   // render the total
-  thElement = document.createElement('th');
-  thElement.textContent = 'Daily Total';
-  trElement.appendChild(thElement);
+  renderElement('th', 'Daily Total', trElement);
 }
 
 // render footer of table
 function renderFooter() {
   var trElement = document.createElement('tr');
   tableFooter.appendChild(trElement);
-  var thElement = document.createElement('th');
-  thElement.textContent = 'Total Sales:';
-  trElement.appendChild(thElement);
+  renderElement('th', 'Total Sales:', trElement);
   var globalDailyTotal = 0;
   for (var i = 0; i < hours.length; i++) {
     var globalHourlyTotal = 0;
@@ -87,22 +81,18 @@ function renderFooter() {
       globalHourlyTotal += stores[j].hourlySales[i];
     }
     globalDailyTotal += globalHourlyTotal;
-    var tdElement = document.createElement('td');
-    tdElement.textContent = globalHourlyTotal;
-    trElement.appendChild(tdElement);
+    renderElement('td', globalHourlyTotal, trElement);
   }
-  tdElement = document.createElement('td');
-  tdElement.textContent = globalDailyTotal;
-  trElement.appendChild(tdElement);
+  renderElement('td', globalDailyTotal, trElement);
 }
 
 //event Handler
 function handleSubmit(event){
   event.preventDefault();
   var name = event.target.nameOfStore.value;
-  var min = event.target.minCustomers.value;
-  var max = event.target.maxCustomers.value;
-  var avg = event.target.avgSales.value;
+  var min = parseInt(event.target.minCustomers.value);
+  var max = parseInt(event.target.maxCustomers.value);
+  var avg = parseInt(event.target.avgSales.value);
   var newStore = new Store(name, min, max, avg);
   newStore.render();
   tableFooter.innerHTML = '';
